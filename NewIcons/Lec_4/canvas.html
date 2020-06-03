@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="toolbar">
+        <div class="tools">
+            <div class="sticky-Pad" onclick="handleClick('sticky')">
+                <img src="./../Git_Files/whiteboard/NewIcons/StickyNote.svg" alt="" class="sticky-pad img-size">
+            
+            </div>
+            <div class = "pencil" onclick="handleClick('pencil')">
+                <img src="./../Git_Files/whiteboard/NewIcons/Black_Pencil.svg" alt="" class="pencil-image img-size">
+                <div class = "pencil-options tool-options" >
+                    <div class="circles">
+                        <button class="red" ></button>
+                        <button class="blue" ></button>
+                        <button class="green" ></button>
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" min="1" max="50" value="5" class="slider" id="myRange">
+                          </div>
+                </div>
+            </div>
+            <div class = "eraser" onclick="handleClick('eraser')">
+                <img src="./../Git_Files/whiteboard/NewIcons/Eraser.svg" alt="" class="eraser-image img-size">
+                <div class = "eraser-options toole-options" >
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="50" value="5" class="slider" id="myRange">
+                      </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <canvas class = "board">
+
+    </canvas>
+    
+</body>
+<script>
+    const board = document.querySelector(".board");
+    board.height = window.innerHeight;
+    board.width = window.innerWidth;
+
+    const ctx = board.getContext("2d");
+    ctx.fillRect(0,0,window.innerWidth, window.innerHeight);
+    
+    // ctx.fillStyle= "red";
+
+    // ctx.fillRect(0,0,window.innerWidth/2,window.innerHeight/2);
+
+    // ctx.strokeStyle = "white";
+    // ctx.lineWidth = 7;
+    // path starts here
+    // ctx.beginPath();
+    // ctx.moveTo(100,200);
+    // ctx.lineTo(500,400);
+    // ctx.moveTo(100,200);
+    // ctx.lineTo(100,600);
+    // // to render on screen
+    // ctx.stroke();
+    // // pat close
+    // ctx.closePath();
+
+
+    
+</script>
+<script src="script.js"></script>
+
+</script>
+<script src = "sticky.js">
+
+</script>
+<script src="tool.js">
+
+</script>
+
+</html>
+
+
